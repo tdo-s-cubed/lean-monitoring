@@ -54,7 +54,7 @@ export default () => {
       ))}
     </ul>
     } else {
-      return 'loading...'
+      return 'loading ...'
     }
 };
 

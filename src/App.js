@@ -1,28 +1,40 @@
-import React from 'react';
-import Drawer from './components/Drawer'
+import React from 'react'
+import DrawerHeader from './components/Drawer-header'
 import Stream from './components/Stream'
+import QlikApp from './components/QlikApp'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import './styles/styles.css';
 
 function App() {
   
   return (
     <Router>
       <div className="App">
-        <Drawer />
-        <Switch>
-            <Route exact path="/">
-                Nothing to display
-            </Route>
-            <Route path="/streams/:id">
+        <div className="container">
+          <div className="row">
+            <div className="col-3 _side-nav-container">
+              <DrawerHeader />
+            </div>
+            <div className="">
+            <Switch>
+              <Route exact path="/">
+                Home route
+              </Route>
+              <Route path="/streams/:id">
                 <Stream />
-            </Route>
-        </Switch>
+              </Route>
+              <Route path="/:streamId/apps/:appId">
+                <QlikApp />
+              </Route>
+            </Switch>
+          </div>
+        </div>
       </div>
+    </div>
     </Router>
     
   );

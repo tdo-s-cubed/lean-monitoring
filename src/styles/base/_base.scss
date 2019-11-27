@@ -1,0 +1,32 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  background-color: $active-grey;
+  color: $active-color !important;
+  div{
+    display: flex;
+    position: absolute;
+    width: 5px;
+    height: 34px;
+    left: 0;
+    background-color: $active-color !important;
+  }
+  img{
+    color: $active-color !important;
+  }
+}

@@ -4,7 +4,6 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 2.2rem;
 }
 
 button {
@@ -35,12 +34,24 @@ button:disabled {
   color: #53a0be !important;
 }
 
-.container {
-  margin: 0;
+.card {
+  width: 20rem;
+  height: 250px;
+}
+
+.card .card-img-top {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .card-body .btn-primary {
+  position: absolute;
+  bottom: 12.5px;
 }
 
 .sideNAV {
-  height: 100vh;
+  height: 100%;
   background-color: #f6f6f6;
 }
 
@@ -48,6 +59,7 @@ button:disabled {
   padding: 0;
   max-width: 20rem;
   display: block;
+  height: 100vh;
 }
 
 ._side-nav-container .sideNAV {
@@ -95,11 +107,11 @@ button:disabled {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 ._side-nav-container .sideNAV ul .nav-item .__icon {
@@ -111,5 +123,30 @@ button:disabled {
 
 ._side-nav-container .sideNAV ul a:hover {
   background-color: #e6e6e6;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container ._content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container ._content-container ._router-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.container ._content-container ._router-container ul li {
+  margin: 0 1.4rem;
 }
 /*# sourceMappingURL=styles.css.map */

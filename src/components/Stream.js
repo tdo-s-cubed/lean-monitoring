@@ -43,29 +43,40 @@ export default () => {
   if (streams.length > 0) {
     const SelectedStreamsApps = streams.filter(app => app.stream.id === id);
     return (
-      <ul className="nav flex-column">
+      <div>
         <h1>{id}</h1>
+        <ul className="">
+          {SelectedStreamsApps.map(app => (
+            <li key={app.id}>
+              <div className="card">
+                <a
+                  href={`https://qs-sand01.s-cubed.local/sense/app/${app.id}/overview`}
+                >
+                  <img
+                    src={`${
+                      app.thumbnail != ""
+                        ? `https://qs-sand01.s-cubed.local/hub/..${app.thumbnail}`
+                        : "https://qs-sand01.s-cubed.local/hub/../resources/hub/img/core/static/Default_thumbnail_app.svg"
+                    }`}
+                    className="card-img-top"
+                    alt="app thumbnail"
+                  ></img>
+                </a>
 
-        {SelectedStreamsApps.map(app => (
-          <li key={app.id}>
-            <img
-              // src={`https://qs-sand01.s-cubed.local/hub/..${app.thumbnail}`}
-              src={`${
-                app.thumbnail != ""
-                  ? `https://qs-sand01.s-cubed.local/hub/..${app.thumbnail}`
-                  : "https://qs-sand01.s-cubed.local/hub/../resources/hub/img/core/static/Default_thumbnail_app.svg"
-              }`}
-              alt="app thumbnail"
-            ></img>
-            {/* Navigates to Qlik app */}
-            <a
-              href={`https://qs-sand01.s-cubed.local/sense/app/${app.id}/overview`}
-            >
-              {app.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+                <div className="card-body">
+                  <h5 className="card-title">{app.name}</h5>
+                  <a
+                    href={`https://qs-sand01.s-cubed.local/sense/app/${app.id}/overview`}
+                    className="btn btn-primary"
+                  >
+                    Open Dashboard
+                  </a>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   } else {
     return "No apps found";

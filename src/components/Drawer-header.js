@@ -13,7 +13,7 @@ import Drawer from "./Drawer";
 function DrawerHeader() {
   return (
     <div className="sideNAV">
-      <h1>Web Charts</h1>
+      <h1>Lean Monitoring</h1>
       <img
         className="logo"
         src="../../images/S-cubed-logo-dark-medium.png"

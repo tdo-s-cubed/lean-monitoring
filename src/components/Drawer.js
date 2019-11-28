@@ -9,7 +9,7 @@ export default () => {
 
   useEffect(() => {
     axios
-      .get("https://qs-sand01.s-cubed.local/qrs/app/hublist?", {
+      .get("https://qs-sand01.s-cubed.local/qrs/app/hublist/full?", {
         params: {
           Xrfkey: 1234567890123456
         },

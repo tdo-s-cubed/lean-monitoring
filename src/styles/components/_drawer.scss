@@ -1,60 +1,59 @@
 .sideNAV {
-    height: 100vh;
-    background-color: $background-light-grey;
+  height: 100vh;
+  background-color: $background-light-grey;
 }
 
 ._side-nav-container {
-    padding: 0;
-    max-width: $nav-width;
-    display: block;
-    .sideNAV{
-        padding-top: $s-margine;
-        border-right: 1px solid $border-grey;
-        h1{
-            margin: 0;
-            font-family: sans-serif;
-            color: $dark-grey;
-            font-size: $m-size;
-            text-align: center;
-            padding-bottom: $s-margine;
-            border-bottom: 1px solid $border-grey;
-        }
-        h2{
-            padding: $s-padding 0;
-            font-family: sans-serif;
-            width: $nav-width;
-            color: $dark-grey;
-            text-align: center;
-        }
-        .logo{
-            width: $nav-width;
-            padding: $s-margine;
-            border-bottom: 1px solid $border-grey;
-        }
-        nav{
-            padding: 0;
-        }
-        ul{
-            .nav-item{
-                height: 34px;
-                color: $dark-grey;
-                font-size: $s-size;
-                padding: $s-padding $m-padding;
-                width: $nav-width;
-                border-bottom: 1px solid $border-grey;
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-                justify-content: left;
-                .__icon{
-                    display: flex;
-                    margin-right: 16px;
-                }
-            }
-            a:hover{
-                background-color: $active-grey;
-            }
-            
-        }
+  padding: 0;
+  max-width: $nav-width;
+  display: block;
+  .sideNAV {
+    padding-top: $s-margine;
+    border-right: 1px solid $border-grey;
+    h1 {
+      margin: 0;
+      font-family: sans-serif;
+      color: $dark-grey;
+      font-size: $m-size;
+      text-align: center;
+      padding-bottom: $s-margine;
+      border-bottom: 1px solid $border-grey;
     }
+    h2 {
+      padding: $s-padding 0;
+      font-family: sans-serif;
+      width: $nav-width;
+      color: $dark-grey;
+      text-align: center;
+    }
+    .logo {
+      width: $nav-width;
+      padding: $s-margine;
+      border-bottom: 1px solid $border-grey;
+    }
+    nav {
+      padding: 0;
+    }
+    ul {
+      .nav-item {
+        height: 34px;
+        color: $dark-grey;
+        font-size: $s-size;
+        padding: $s-padding $m-padding;
+        width: $nav-width;
+        border-bottom: 1px solid $border-grey;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        .__icon {
+          display: flex;
+          margin-right: 16px;
+        }
+      }
+      a:hover {
+        background-color: $active-grey;
+      }
+    }
+  }
 }

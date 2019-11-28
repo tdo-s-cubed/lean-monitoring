@@ -18,7 +18,7 @@ button:disabled {
 .is-active {
   background-color: $active-grey;
   color: $active-color !important;
-  div{
+  div {
     display: flex;
     position: absolute;
     width: 5px;
@@ -26,7 +26,7 @@ button:disabled {
     left: 0;
     background-color: $active-color !important;
   }
-  img{
+  img {
     color: $active-color !important;
   }
 }

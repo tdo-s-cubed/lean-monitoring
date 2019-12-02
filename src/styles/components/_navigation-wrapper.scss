@@ -1,0 +1,10 @@
+.navigation-wrapper {
+  height: inherit;
+}
+
+// Media Querys that handle navigation responsivness
+@media (max-width: 768px) {
+  .navigation-wrapper {
+    width: 0;
+  }
+}

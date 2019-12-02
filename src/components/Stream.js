@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -44,7 +44,6 @@ export default () => {
     const SelectedStreamsApps = streams.filter(app => app.stream.id === id);
     return (
       <div>
-        <h1>{id}</h1>
         <ul className="">
           {SelectedStreamsApps.map(app => (
             <li key={app.id}>
@@ -54,7 +53,7 @@ export default () => {
                 >
                   <img
                     src={`${
-                      app.thumbnail != ""
+                      app.thumbnail !== ""
                         ? `https://qs-sand01.s-cubed.local/hub/..${app.thumbnail}`
                         : "https://qs-sand01.s-cubed.local/hub/../resources/hub/img/core/static/Default_thumbnail_app.svg"
                     }`}

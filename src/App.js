@@ -3,6 +3,8 @@ import DrawerHeader from "./components/Drawer-header";
 import Stream from "./components/Stream";
 import QlikApp from "./components/QlikApp";
 import NotFoundPage from "./components/NotFoundPage";
+import SignIn from "./components/SignIn";
+import LandingPage from "./components/LandingPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/styles.css";
 
@@ -17,6 +19,12 @@ function App() {
             </div>
             <div className="_router-container">
               <Switch>
+                <Route path="/LandingPage">
+                  <LandingPage />
+                </Route>
+                <Route path="/SignIn">
+                  <SignIn />
+                </Route>
                 <Route exact path="/">
                   Home route
                 </Route>

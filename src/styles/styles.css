@@ -63,11 +63,11 @@ button:disabled {
 }
 
 ._side-nav-container .sideNAV {
-  padding-top: 0.5rem;
   border-right: 1px solid #dedede;
 }
 
-._side-nav-container .sideNAV h1 {
+._side-nav-container .sideNAV .name {
+  padding-top: 0.5rem;
   margin: 0;
   font-family: sans-serif;
   color: #595959;
@@ -83,6 +83,7 @@ button:disabled {
   width: 20rem;
   color: #595959;
   text-align: center;
+  border-bottom: 1px solid #dedede;
 }
 
 ._side-nav-container .sideNAV .logo {
@@ -125,6 +126,46 @@ button:disabled {
   background-color: #e6e6e6;
 }
 
+._side-nav-container .topNAV .name {
+  padding-top: 0.5rem;
+  margin: 0;
+  font-family: sans-serif;
+  color: #595959;
+  font-size: 2.2rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+._side-nav-container .topNAV #navbarNavDropdown .navbar-nav .nav-item {
+  height: 3.2rem;
+  color: #595959;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+._side-nav-container .topNAV #navbarNavDropdown .navbar-nav .nav-item .__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .sideNAV {
+    display: none;
+  }
+}
+
 .container {
   margin: 0;
   padding: 0;
@@ -139,14 +180,62 @@ button:disabled {
   display: flex;
 }
 
+.container ._content-container ._router-container {
+  margin-top: 2.2rem;
+}
+
 .container ._content-container ._router-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style-type: none;
 }
 
 .container ._content-container ._router-container ul li {
   margin: 0 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  ._router-container {
+    z-index: -1;
+  }
+  .container ._content-container ._router-container {
+    margin-top: 7.2rem;
+    width: 100vw;
+  }
+  .container ._content-container ul {
+    padding: 0;
+  }
+  .container ._content-container ul li {
+    margin: auto;
+  }
+  .container ._content-container ul li .card {
+    margin-bottom: 2.2rem;
+    margin: 0 auto;
+  }
+}
+
+.navigation-wrapper {
+  height: inherit;
+}
+
+@media (max-width: 768px) {
+  .navigation-wrapper {
+    width: 0;
+  }
+}
+
+.topNAV {
+  width: 100vw;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .topNAV {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

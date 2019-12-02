@@ -5,11 +5,39 @@
   ._content-container {
     display: flex;
     ._router-container {
+      margin-top: $m-size;
       ul {
         display: flex;
+        flex-wrap: wrap;
         list-style-type: none;
         li {
           margin: 0 $s-size;
+          padding-bottom: $s-size;
+        }
+      }
+    }
+  }
+}
+
+// Media Querys that handle navigation responsivness
+@media (max-width: 768px) {
+  ._router-container {
+    z-index: -1;
+  }
+  .container {
+    ._content-container {
+      ._router-container {
+        margin-top: $xl-size * 1.5;
+        width: 100vw;
+      }
+      ul {
+        padding: 0;
+        li {
+          margin: auto;
+          .card {
+            margin-bottom: $m-size;
+            margin: 0 auto;
+          }
         }
       }
     }

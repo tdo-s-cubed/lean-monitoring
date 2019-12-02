@@ -9,9 +9,9 @@
   display: block;
   height: 100vh;
   .sideNAV {
-    padding-top: $s-margine;
     border-right: 1px solid $border-grey;
-    h1 {
+    .name {
+      padding-top: $s-margine;
       margin: 0;
       font-family: sans-serif;
       color: $dark-grey;
@@ -26,6 +26,7 @@
       width: $nav-width;
       color: $dark-grey;
       text-align: center;
+      border-bottom: 1px solid $border-grey;
     }
     .logo {
       width: $nav-width;
@@ -56,5 +57,41 @@
         background-color: $active-grey;
       }
     }
+  }
+  .topNAV {
+    .name {
+      padding-top: $s-margine;
+      margin: 0;
+      font-family: sans-serif;
+      color: $dark-grey;
+      font-size: $m-size;
+      text-align: center;
+      padding-bottom: $s-margine;
+    }
+    #navbarNavDropdown {
+      .navbar-nav {
+        .nav-item {
+          height: $l-size;
+          color: $dark-grey;
+          font-size: $s-size;
+          padding: $s-padding $m-padding;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          .__icon {
+            display: flex;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Querys that handle navigation responsivness
+@media (max-width: 768px) {
+  .sideNAV {
+    display: none;
   }
 }

@@ -170,22 +170,21 @@ button:disabled {
 .container {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container ._content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .container ._content-container ._router-container {
-  margin-top: 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.container ._content-container ._router-container ul {
+.container ._content-container ._router-container ._router {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container ._content-container ._router-container ._router ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,23 +193,34 @@ button:disabled {
   list-style-type: none;
 }
 
-.container ._content-container ._router-container ul li {
-  margin: 0 1.4rem;
-  padding-bottom: 1.4rem;
+.container ._content-container ._router-container ._router ul li {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.container ._content-container ._router-container ._router ._stream-cards {
+  padding-top: 2.2rem;
+}
+
+.container ._content-container ._router-container ._router ._stream-cards .card {
+  margin: 1.4rem;
 }
 
 @media (max-width: 768px) {
   ._router-container {
+    margin: 0;
     z-index: -1;
   }
   .container ._content-container ._router-container {
-    margin-top: 7.2rem;
     width: 100vw;
   }
-  .container ._content-container ul {
+  .container ._content-container ._stream-cards {
+    margin-top: 7.2rem;
+  }
+  .container ._content-container ._stream-cards ul {
     padding: 0;
   }
-  .container ._content-container ul li .card {
+  .container ._content-container ._stream-cards ul li .card {
     margin-bottom: 2.2rem;
     margin: 0 auto;
   }
@@ -234,6 +244,10 @@ button:disabled {
 @media (max-width: 768px) {
   .topNAV {
     display: block;
+    z-index: 1;
+  }
+  .topNAV .navbar {
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=styles.css.map */

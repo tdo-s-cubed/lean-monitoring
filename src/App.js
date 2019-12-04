@@ -14,30 +14,36 @@ function App() {
       <div className="App">
         <div className="container">
           <div className="_content-container">
-            <div className="_side-nav-container">
-              <DrawerHeader />
-            </div>
             <div className="_router-container">
-              <Switch>
-                <Route path="/LandingPage">
-                  <LandingPage />
-                </Route>
-                <Route path="/SignIn">
-                  <SignIn />
-                </Route>
-                <Route exact path="/home">
-                  Home route
-                </Route>
-                <Route path="/streams/:id">
-                  <Stream />
-                </Route>
-                <Route path="/:streamId/apps/:appId">
-                  <QlikApp />
-                </Route>
-                <Route>
-                  <NotFoundPage />
-                </Route>
-              </Switch>
+              <div className="_router">
+                <Switch>
+                  <Route path="/LandingPage">
+                    <LandingPage />
+                  </Route>
+                  <Route path="/SignIn">
+                    <SignIn />
+                  </Route>
+                  <Route exact path="/home">
+                    <DrawerHeader />
+                    Home route
+                  </Route>
+                  <Route exact path="/">
+                    <DrawerHeader />
+                    Home route
+                  </Route>
+                  <Route path="/streams/:id">
+                    <DrawerHeader />
+                    <Stream />
+                  </Route>
+                  <Route path="/:streamId/apps/:appId">
+                    <DrawerHeader />
+                    <QlikApp />
+                  </Route>
+                  <Route>
+                    <NotFoundPage />
+                  </Route>
+                </Switch>
+              </div>
             </div>
           </div>
         </div>

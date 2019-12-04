@@ -44,7 +44,7 @@ export default () => {
     const SelectedStreamsApps = streams.filter(app => app.stream.id === id);
     return (
       <div>
-        <ul className="">
+        <ul className="_stream-cards">
           {SelectedStreamsApps.map(app => (
             <li key={app.id}>
               <div className="card">

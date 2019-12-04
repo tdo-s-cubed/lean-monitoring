@@ -84,6 +84,7 @@ button:disabled {
   color: #595959;
   text-align: center;
   border-bottom: 1px solid #dedede;
+  margin-bottom: 0;
 }
 
 ._side-nav-container .sideNAV .logo {
@@ -208,9 +209,6 @@ button:disabled {
   }
   .container ._content-container ul {
     padding: 0;
-  }
-  .container ._content-container ul li {
-    margin: auto;
   }
   .container ._content-container ul li .card {
     margin-bottom: 2.2rem;

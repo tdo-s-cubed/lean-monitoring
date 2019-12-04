@@ -25,7 +25,7 @@ function App() {
                 <Route path="/SignIn">
                   <SignIn />
                 </Route>
-                <Route exact path="/">
+                <Route exact path="/home">
                   Home route
                 </Route>
                 <Route path="/streams/:id">

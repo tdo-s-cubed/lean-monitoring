@@ -20,7 +20,7 @@ export default () => {
         withCredentials: true
       })
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
 
         const streamData = [];
 

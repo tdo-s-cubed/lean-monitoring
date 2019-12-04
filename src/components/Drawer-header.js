@@ -24,7 +24,7 @@ function DrawerHeader() {
           <div className="sidebar-sticky">
             <ul className="nav flex-column">
               <NavLink
-                to="/"
+                to="/home"
                 className="nav-item"
                 activeClassName="is-active"
                 exact={true}

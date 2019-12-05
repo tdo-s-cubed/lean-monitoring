@@ -4,7 +4,6 @@ import Stream from "./components/Stream";
 import QlikApp from "./components/QlikApp";
 import NotFoundPage from "./components/NotFoundPage";
 import SignIn from "./components/SignIn";
-import LandingPage from "./components/LandingPage";
 import UserDataBox from "./components/UserDataBox";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/styles.css";
@@ -18,16 +17,12 @@ function App() {
             <div className="_router-container">
               <div className="_router">
                 <Switch>
-                  <Route path="/LandingPage">
-                    <LandingPage />
-                  </Route>
                   <Route path="/SignIn">
                     <SignIn />
                   </Route>
                   <Route exact path="/home">
                     <DrawerHeader />
                     <UserDataBox />
-                    Home route
                   </Route>
                   <Route exact path="/">
                     <DrawerHeader />

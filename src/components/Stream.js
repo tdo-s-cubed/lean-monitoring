@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import UserDataBox from "./UserDataBox";
 
 export default () => {
   const { id } = useParams();
@@ -52,7 +53,9 @@ export default () => {
     const SelectedStreamsApps = streams.filter(app => app.stream.id === id);
 
     return (
-      <div>
+      <div className="_stream-container">
+        <UserDataBox />
+
         <ul className="_stream-cards">
           {SelectedStreamsApps.map(app => (
             // Format lastReloadTime date
@@ -103,8 +106,8 @@ export default () => {
     );
   } else {
     return (
-      <div class="spinner-border text-info" role="status">
-        <span class="sr-only">Loading...</span>
+      <div className="spinner-border text-info" role="status">
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }

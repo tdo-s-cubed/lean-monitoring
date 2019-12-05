@@ -125,6 +125,7 @@ button:disabled {
 
 ._side-nav-container .sideNAV {
   border-right: 1px solid #dedede;
+  position: fixed;
 }
 
 ._side-nav-container .sideNAV .name {
@@ -253,10 +254,10 @@ button:disabled {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style-type: none;
-  padding-left: 150px;
+  margin-left: 25rem;
 }
 
-.container ._content-container ._router-container ._router ._stream-cards li {
+.container ._content-container ._router-container ._router ._stream-cards ul li {
   margin: 0;
   padding-bottom: 0;
 }
@@ -270,28 +271,8 @@ button:disabled {
 }
 
 @media (max-width: 768px) {
-  ._router-container {
-    margin: 0;
-    z-index: -1;
-  }
-  .container ._content-container ._router-container {
-    width: 100vw;
-  }
-  .container ._content-container ._stream-cards {
-    margin-top: 7.2rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .container ._content-container ._stream-cards ul {
-    padding: 0;
-  }
-  .container ._content-container ._stream-cards ul li .card {
-    margin-bottom: 2.2rem;
-    margin: 0 auto;
+  .container ._content-container ._router-container ._router ._stream-cards {
+    margin-left: 0;
   }
 }
 
@@ -317,6 +298,37 @@ button:disabled {
   }
   .topNAV .navbar {
     z-index: 1;
+  }
+}
+
+.user-data-box {
+  padding-left: 15rem;
+  width: 60vw;
+}
+
+.user-data-box .jumbotron {
+  margin-top: 2.2rem;
+  margin-left: 15rem;
+}
+
+@media (max-width: 768px) {
+  .user-data-box {
+    padding: 0;
+    width: 100%;
+  }
+  .user-data-box .jumbotron {
+    margin-top: 7.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .user-data-box {
+    padding: 0;
+    width: 100%;
+  }
+  .user-data-box .jumbotron {
+    margin-top: 7.2rem;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

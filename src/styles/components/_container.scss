@@ -5,17 +5,18 @@
   ._content-container {
     ._router-container {
       display: flex;
-
       ._router {
         display: flex;
         ._stream-cards {
           display: flex;
           flex-wrap: wrap;
           list-style-type: none;
-          padding-left: 150px;
-          li {
-            margin: 0;
-            padding-bottom: 0;
+          margin-left: 25rem;
+          ul {
+            li {
+              margin: 0;
+              padding-bottom: 0;
+            }
           }
         }
         ._stream-cards {
@@ -31,26 +32,12 @@
 
 // Media Querys that handle navigation responsivness
 @media (max-width: 768px) {
-  ._router-container {
-    margin: 0;
-    z-index: -1;
-  }
   .container {
     ._content-container {
       ._router-container {
-        width: 100vw;
-      }
-      ._stream-cards {
-        margin-top: $xl-size * 1.5;
-        align-items: center;
-        justify-content: center;
-        ul {
-          padding: 0;
-          li {
-            .card {
-              margin-bottom: $m-size;
-              margin: 0 auto;
-            }
+        ._router {
+          ._stream-cards {
+            margin-left: 0;
           }
         }
       }

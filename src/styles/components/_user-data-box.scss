@@ -1,0 +1,29 @@
+.user-data-box {
+  padding-left: 15rem;
+  width: 60vw;
+  .jumbotron {
+    margin-top: $m-size;
+    margin-left: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-data-box {
+    padding: 0;
+    width: 100%;
+    .jumbotron {
+      margin-top: $xl-size * 1.5;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .user-data-box {
+    padding: 0;
+    width: 100%;
+    .jumbotron {
+      margin-top: $xl-size * 1.5;
+      margin-left: 0;
+    }
+  }
+}

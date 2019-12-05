@@ -25,8 +25,15 @@ export default () => {
   }, []);
 
   return (
-    <div>
-      <h1>Welcome {} !</h1>
+    <div className="user-data-box">
+      <div className="jumbotron">
+        <h1 className="display-4">Hello, Daniel!</h1>
+        <p>Last log-in date: 05.10.2019</p>
+        <p>Sessions: 145</p>
+        <a className="btn btn-primary btn-lg" href="#" role="button">
+          Log out
+        </a>
+      </div>
     </div>
   );
 };

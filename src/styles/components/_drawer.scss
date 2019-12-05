@@ -10,6 +10,7 @@
   height: 100vh;
   .sideNAV {
     border-right: 1px solid $border-grey;
+    position: fixed;
     .name {
       padding-top: $s-margine;
       margin: 0;

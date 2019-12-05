@@ -1,16 +1,18 @@
 .container {
   margin: 0;
   padding: 0;
+  max-width: 1340px;
   ._content-container {
     ._router-container {
       display: flex;
 
       ._router {
         display: flex;
-        ul {
+        ._stream-cards {
           display: flex;
           flex-wrap: wrap;
           list-style-type: none;
+          padding-left: 150px;
           li {
             margin: 0;
             padding-bottom: 0;
@@ -40,7 +42,8 @@
       }
       ._stream-cards {
         margin-top: $xl-size * 1.5;
-
+        align-items: center;
+        justify-content: center;
         ul {
           padding: 0;
           li {

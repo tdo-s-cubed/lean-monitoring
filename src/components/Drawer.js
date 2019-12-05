@@ -67,6 +67,10 @@ export default () => {
       </ul>
     );
   } else {
-    return "loading...";
+    return (
+      <div class="spinner-border text-info" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    );
   }
 };

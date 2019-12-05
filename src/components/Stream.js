@@ -7,6 +7,14 @@ export default () => {
   const { id } = useParams();
   const [streams, setStreams] = useState(false);
 
+  // String shortening functionality (can be used by called by- variable.trunc(num_of_charecters_to_cut_at))
+  String.prototype.trunc =
+    String.prototype.trunc ||
+    function(n) {
+      return this.length > n ? this.substr(0, n - 1) + " ..." : this;
+    };
+
+  // API CALL
   useEffect(() => {
     axios
       .get("https://qs-sand01.s-cubed.local/qrs/app/hublist/full?", {
@@ -20,7 +28,7 @@ export default () => {
         withCredentials: true
       })
       .then(response => {
-        // console.log(response.data);
+        console.log(response.data);
 
         const appData = [];
 
@@ -42,10 +50,13 @@ export default () => {
 
   if (streams.length > 0) {
     const SelectedStreamsApps = streams.filter(app => app.stream.id === id);
+
     return (
       <div>
         <ul className="_stream-cards">
           {SelectedStreamsApps.map(app => (
+            // Format lastReloadTime date
+
             <li key={app.id}>
               <div className="card">
                 <a
@@ -63,13 +74,26 @@ export default () => {
                 </a>
 
                 <div className="card-body">
-                  <h5 className="card-title">{app.name}</h5>
-                  <a
-                    href={`https://qs-sand01.s-cubed.local/sense/app/${app.id}/overview`}
-                    className="btn btn-primary"
-                  >
-                    Open Dashboard
-                  </a>
+                  <div className="flex-top">
+                    <h5 className="card-title">{app.name.trunc(50)}</h5>
+                    <p className="card-text">{app.description.trunc(75)}</p>
+                  </div>
+
+                  <div className="flex-end">
+                    <h6 className="card-subtitle mb-2 text-muted">
+                      Last reloaded:
+                      {/* Formting the date format */}
+                      {app.lastReloadTime
+                        .replace("T", " ")
+                        .substring(0, app.lastReloadTime.length - 5)}
+                    </h6>
+                    <a
+                      href={`https://qs-sand01.s-cubed.local/sense/app/${app.id}/overview`}
+                      className="btn btn-primary"
+                    >
+                      Open Dashboard
+                    </a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -78,6 +102,10 @@ export default () => {
       </div>
     );
   } else {
-    return "No apps found";
+    return (
+      <div class="spinner-border text-info" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    );
   }
 };

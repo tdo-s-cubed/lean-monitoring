@@ -18,7 +18,7 @@ function DrawerHeader() {
           <h1 className="name">Lean Monitoring</h1>
           <img
             className="logo"
-            src="images/S-cubed-logo-dark-medium.png"
+            src="../images/S-cubed-logo-dark-medium.png"
             alt="S-cubed-logo"
           ></img>
           <nav className="col-md-2 d-none d-md-block bg-light sidebar">

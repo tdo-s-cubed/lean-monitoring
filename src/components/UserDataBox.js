@@ -27,12 +27,12 @@ export default () => {
     return (
       <div className="user-data-box">
         <div className="jumbotron row">
-          <div className="col-10">
+          <div className="col-9">
             <h1 className="display-4">{`Hello, ${user.userName}`}</h1>
             <p>Last log-in date: 05.10.2019</p>
             <p>Sessions: 145</p>
           </div>
-          <div className="col-2">
+          <div className="col-3">
             <a
               className="btn btn-primary btn-lg"
               href={`${user.logoutUri}`}

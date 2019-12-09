@@ -32,7 +32,7 @@ button:disabled {
 
 .card {
   width: 26rem;
-  height: 34rem;
+  height: 32rem;
   -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
           box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
   -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
@@ -245,6 +245,7 @@ button:disabled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .container ._content-container ._router-container ._router ._stream-name {
@@ -310,32 +311,33 @@ button:disabled {
 
 .user-data-box {
   padding-left: 15rem;
-  width: 60vw;
+  width: 70vw;
 }
 
 .user-data-box .jumbotron {
   margin-top: 2.2rem;
   margin-left: 15rem;
+  width: 70%;
+  padding: 20px 10px;
 }
 
 @media (max-width: 768px) {
   .user-data-box {
     padding: 0;
-    width: 100%;
   }
   .user-data-box .jumbotron {
     margin-top: 7.2rem;
+    margin-left: 0;
+    width: 100%;
   }
 }
 
 @media (max-width: 1024px) {
   .user-data-box {
-    padding: 0;
     width: 100%;
   }
-  .user-data-box .jumbotron {
-    margin-top: 7.2rem;
-    margin-left: 0;
+  .jumbotron {
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,11 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faStream,
-  faChartBar
-} from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 import Drawer from "./Drawer";
 
@@ -66,23 +62,7 @@ function DrawerHeader() {
                   <FontAwesomeIcon className="__icon" icon={faHome} />
                   Home
                 </NavLink>
-                <NavLink
-                  to="/stream"
-                  className="nav-item"
-                  activeClassName="is-active"
-                  exact={true}
-                >
-                  <FontAwesomeIcon className="__icon" icon={faStream} />
-                  Stream
-                </NavLink>
-                <NavLink
-                  to="/app"
-                  className="nav-item"
-                  activeClassName="is-active"
-                >
-                  <FontAwesomeIcon className="__icon" icon={faChartBar} />
-                  App
-                </NavLink>
+
                 <h2>Streams</h2>
                 <Drawer />
               </ul>

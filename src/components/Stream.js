@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import UserDataBox from "./UserDataBox";
@@ -45,22 +44,23 @@ export default () => {
         appData.map(appdata =>
           console.log(" stream:id" + appdata.stream.id + " " + appdata.name)
         );
-        //setStreams(response.data);
       });
   }, []);
 
   if (streams.length > 0) {
     const SelectedStreamsApps = streams.filter(app => app.stream.id === id);
-
+    // console.log(SelectedStreamsApps[0].stream.name);
     return (
       <div className="_stream-container">
         <UserDataBox />
+        <h1 className="_stream-name"> {SelectedStreamsApps[0].stream.name}</h1>
 
         <ul className="_stream-cards">
           {SelectedStreamsApps.map(app => (
             // Format lastReloadTime date
 
             <li key={app.id}>
+              {/* <h1>{app.stream.name}</h1> */}
               <div className="card">
                 <a
                   href={`https://qs-sand01.s-cubed.local/sense/app/${app.id}/overview`}

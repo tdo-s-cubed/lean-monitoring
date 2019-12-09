@@ -18,22 +18,43 @@ export default () => {
         withCredentials: true
       })
       .then(response => {
-        const userData = response;
-        setUser(userData);
-        console.log(userData);
+        setUser(response.data);
+        // console.log(response.data);
       });
   }, []);
 
-  return (
-    <div className="user-data-box">
-      <div className="jumbotron">
-        <h1 className="display-4">Hello, Daniel!</h1>
-        <p>Last log-in date: 05.10.2019</p>
-        <p>Sessions: 145</p>
-        <a className="btn btn-primary btn-lg" href="#" role="button">
-          Log out
-        </a>
+  if (user !== false) {
+    return (
+      <div className="user-data-box">
+        <div className="jumbotron row">
+          <div className="col-10">
+            <h1 className="display-4">{`Hello, ${user.userName}`}</h1>
+            <p>Last log-in date: 05.10.2019</p>
+            <p>Sessions: 145</p>
+          </div>
+          <div className="col-2">
+            <a
+              className="btn btn-primary btn-lg"
+              href={`${user.logoutUri}`}
+              role="button"
+            >
+              Log out
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="user-data-box">
+        <div className="jumbotron">
+          <h1 className="display-4">{`Hello, Annanymos`}</h1>
+          <p></p>
+          <a className="btn btn-primary btn-lg" href="/" role="button">
+            Log out
+          </a>
+        </div>
+      </div>
+    );
+  }
 };

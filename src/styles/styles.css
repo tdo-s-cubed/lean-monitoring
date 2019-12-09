@@ -247,6 +247,10 @@ button:disabled {
   display: flex;
 }
 
+.container ._content-container ._router-container ._router ._stream-name {
+  margin-left: 30rem;
+}
+
 .container ._content-container ._router-container ._router ._stream-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,6 +275,9 @@ button:disabled {
 }
 
 @media (max-width: 768px) {
+  .container ._content-container ._router-container ._router ._stream-name {
+    margin-left: 2rem;
+  }
   .container ._content-container ._router-container ._router ._stream-cards {
     margin-left: 0;
   }

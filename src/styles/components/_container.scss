@@ -7,6 +7,9 @@
       display: flex;
       ._router {
         display: flex;
+        ._stream-name {
+          margin-left: 30rem;
+        }
         ._stream-cards {
           display: flex;
           flex-wrap: wrap;
@@ -36,6 +39,9 @@
     ._content-container {
       ._router-container {
         ._router {
+          ._stream-name {
+            margin-left: 2rem;
+          }
           ._stream-cards {
             margin-left: 0;
           }

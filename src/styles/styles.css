@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: #ffffff;
+}
+
 button {
   cursor: pointer;
 }
@@ -126,6 +130,7 @@ button:disabled {
 ._side-nav-container .sideNAV {
   border-right: 1px solid #dedede;
   position: fixed;
+  left: 0;
 }
 
 ._side-nav-container .sideNAV .name {
@@ -230,7 +235,6 @@ button:disabled {
 }
 
 .container {
-  margin: 0;
   padding: 0;
   max-width: 1340px;
 }
@@ -246,6 +250,27 @@ button:disabled {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+
+.container ._content-container ._router-container ._router .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin: 10% 0;
+  min-height: 200px;
+  align-items: center;
 }
 
 .container ._content-container ._router-container ._router ._stream-name {
@@ -336,8 +361,9 @@ button:disabled {
   .user-data-box {
     width: 100%;
   }
-  .jumbotron {
-    padding-right: 0;
-  }
+}
+
+.form-signin input {
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=styles.css.map */

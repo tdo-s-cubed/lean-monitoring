@@ -1,0 +1,64 @@
+.container {
+  padding: 0;
+  max-width: 1340px;
+  // position: absolute;
+  ._content-container {
+    ._router-container {
+      display: flex;
+      ._router {
+        display: flex;
+        width: 100%;
+        .form-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+          margin: 10% 0;
+          min-height: 200px;
+          align-items: center;
+        }
+        ._stream-name {
+          margin-left: 30rem;
+        }
+        ._stream-cards {
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          margin-left: 25rem;
+          ul {
+            li {
+              margin: 0;
+              padding-bottom: 0;
+            }
+          }
+        }
+        ._stream-cards {
+          padding-top: $m-size;
+          .card {
+            margin: $s-size;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Querys that handle navigation responsivness
+@media (max-width: 768px) {
+  .container {
+    ._content-container {
+      ._router-container {
+        ._router {
+          ._stream-name {
+            margin-left: 2rem;
+          }
+          ._stream-cards {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

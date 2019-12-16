@@ -1,0 +1,373 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  background-color: #e6e6e6;
+  color: #53a0be !important;
+}
+
+.is-active div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 5px;
+  height: 34px;
+  left: 0;
+  background-color: #53a0be !important;
+}
+
+.is-active img {
+  color: #53a0be !important;
+}
+
+.card {
+  width: 26rem;
+  height: 32rem;
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
+          box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+.card .card-img-top {
+  min-height: 16.5rem;
+  max-height: 17rem;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .card-body .card-title {
+  font-size: 1.45rem;
+}
+
+.card .card-body .card-text {
+  font-size: 1.3rem;
+}
+
+.card .card-body .card-subtitle {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.card .card-body .btn-primary {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  bottom: 12.5px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #6badc2;
+  border-color: #6badc2;
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
+          box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+.card .card-body .btn-primary:hover {
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  background-color: #318bac;
+  border-color: #318bac;
+}
+
+.sideNAV {
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+._side-nav-container {
+  padding: 0;
+  max-width: 20rem;
+  display: block;
+  height: 100vh;
+}
+
+._side-nav-container .sideNAV {
+  border-right: 1px solid #dedede;
+  position: fixed;
+  left: 0;
+}
+
+._side-nav-container .sideNAV .name {
+  padding-top: 0.5rem;
+  margin: 0;
+  font-family: sans-serif;
+  color: #595959;
+  font-size: 2.2rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dedede;
+}
+
+._side-nav-container .sideNAV h2 {
+  padding: 0.8rem 0;
+  font-family: sans-serif;
+  width: 20rem;
+  color: #595959;
+  text-align: center;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 0;
+}
+
+._side-nav-container .sideNAV .logo {
+  width: 20rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #dedede;
+}
+
+._side-nav-container .sideNAV nav {
+  padding: 0;
+}
+
+._side-nav-container .sideNAV ul .nav-item {
+  height: 34px;
+  color: #595959;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  width: 20rem;
+  border-bottom: 1px solid #dedede;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+._side-nav-container .sideNAV ul .nav-item .__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+}
+
+._side-nav-container .sideNAV ul a:hover {
+  background-color: #e6e6e6;
+}
+
+._side-nav-container .topNAV .name {
+  padding-top: 0.5rem;
+  margin: 0;
+  font-family: sans-serif;
+  color: #595959;
+  font-size: 2.2rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+._side-nav-container .topNAV #navbarNavDropdown .navbar-nav .nav-item {
+  height: 3.2rem;
+  color: #595959;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+._side-nav-container .topNAV #navbarNavDropdown .navbar-nav .nav-item .__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .sideNAV {
+    display: none;
+  }
+}
+
+.container {
+  padding: 0;
+  max-width: 1340px;
+}
+
+.container ._content-container ._router-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container ._content-container ._router-container ._router {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container ._content-container ._router-container ._router .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin: 10% 0;
+  min-height: 200px;
+  align-items: center;
+}
+
+.container ._content-container ._router-container ._router ._stream-name {
+  margin-left: 30rem;
+}
+
+.container ._content-container ._router-container ._router ._stream-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: 25rem;
+}
+
+.container ._content-container ._router-container ._router ._stream-cards ul li {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.container ._content-container ._router-container ._router ._stream-cards {
+  padding-top: 2.2rem;
+}
+
+.container ._content-container ._router-container ._router ._stream-cards .card {
+  margin: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .container ._content-container ._router-container ._router ._stream-name {
+    margin-left: 2rem;
+  }
+  .container ._content-container ._router-container ._router ._stream-cards {
+    margin-left: 0;
+  }
+}
+
+.navigation-wrapper {
+  height: inherit;
+}
+
+@media (max-width: 768px) {
+  .navigation-wrapper {
+    width: 0;
+  }
+}
+
+.topNAV {
+  width: 100vw;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .topNAV {
+    display: block;
+    z-index: 1;
+  }
+  .topNAV .navbar {
+    z-index: 1;
+  }
+}
+
+.user-data-box {
+  padding-left: 15rem;
+  width: 70vw;
+}
+
+.user-data-box .jumbotron {
+  margin-top: 2.2rem;
+  margin-left: 15rem;
+  width: 70%;
+  padding: 20px 10px;
+}
+
+@media (max-width: 768px) {
+  .user-data-box {
+    padding: 0;
+  }
+  .user-data-box .jumbotron {
+    margin-top: 7.2rem;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .user-data-box {
+    width: 100%;
+  }
+}
+
+.form-signin input {
+  font-size: 1.6rem;
+}
+
+.form-signin #inputPassword {
+  margin-top: 0.5rem;
+}
+/*# sourceMappingURL=styles.css.map */

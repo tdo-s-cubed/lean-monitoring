@@ -29,13 +29,15 @@ export default () => {
         <div className="jumbotron row">
           <div className="col-9">
             <h1 className="display-4">{`Hello, ${user.userName}`}</h1>
+            {/* Hardcoded user data for later implementation */}
             <p>Last log-in date: 05.10.2019</p>
             <p>Sessions: 145</p>
           </div>
           <div className="col-3">
+            {/* Should handle loging out part here!!! */}
             <a
               className="btn btn-primary btn-lg"
-              href={`${user.logoutUri}`}
+              href={`/SignIn`}
               role="button"
             >
               Log out

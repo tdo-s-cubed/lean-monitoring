@@ -23,10 +23,13 @@ function App() {
                   <Route exact path="/home">
                     <DrawerHeader />
                     <UserDataBox />
+                    {/* <div>
+                      <img src=".\images\Select-your-streams.png"></img>
+                    </div> */}
                   </Route>
                   <Route exact path="/">
                     <DrawerHeader />
-                    Home route
+                    <UserDataBox />
                   </Route>
                   <Route path="/streams/:id">
                     <DrawerHeader />

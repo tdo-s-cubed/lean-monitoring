@@ -1,9 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Drawer from "./Drawer";
 
 function DrawerHeader() {
@@ -19,18 +19,6 @@ function DrawerHeader() {
           ></img>
           <nav className="col-md-2 d-none d-md-block bg-light sidebar">
             <div className="sidebar-sticky">
-              <ul className="nav flex-column">
-                <NavLink
-                  to="/home"
-                  className="nav-item"
-                  activeClassName="is-active"
-                  exact={true}
-                >
-                  <FontAwesomeIcon className="__icon" icon={faHome} />
-                  Home
-                </NavLink>
-              </ul>
-
               <h2>Streams</h2>
 
               <Drawer />
@@ -53,16 +41,15 @@ function DrawerHeader() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                <NavLink
+                <button
                   to="/"
                   className="nav-item"
-                  activeClassName="is-active"
-                  exact={true}
+                  activeclassname="is-active"
+                  exact="true"
                 >
                   <FontAwesomeIcon className="__icon" icon={faHome} />
                   Home
-                </NavLink>
-
+                </button>
                 <h2>Streams</h2>
                 <Drawer />
               </ul>

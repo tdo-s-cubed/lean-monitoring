@@ -366,4 +366,8 @@ button:disabled {
 .form-signin input {
   font-size: 1.6rem;
 }
+
+.form-signin #inputPassword {
+  margin-top: 0.5rem;
+}
 /*# sourceMappingURL=styles.css.map */
